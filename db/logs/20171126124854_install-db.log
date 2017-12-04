@@ -1,0 +1,2 @@
+psql:create-db.sql:11: ERREUR:  le répertoire « /robots/db/robots_data » n'existe pas
+psql:create-db.sql:12: ERREUR:  le répertoire « /robots/db/robots_index » n'existe pas
