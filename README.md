@@ -4,7 +4,7 @@ This is a Spring based REST API for Robots Shop
 
 ## Authors
 
-* **Maissa Jabri**  - [mizaMeyssa](https://github.com/mizaMeyssa)
+* **Maissa Jabri**  [mizaMeyssa](https://github.com/mizaMeyssa)
 
 ## Prerequisites
 
@@ -18,8 +18,8 @@ This is a Spring based REST API for Robots Shop
 * Install all the prerequisites 
 * Download the package and go under robots_shop_backend folder
 * Create The database as follows 
-- Go under robots_shop_backend/db folder
-- Run 
+Go under robots_shop_backend/db folder
+Run 
 ```
 sh install_db.sh
 ```
@@ -32,19 +32,19 @@ PGDATABASE='robots'
 PGPORT='5432'
 ```
 * Run the application
-- Go back under robots_shop_backend/
-- run
+Go back under robots_shop_backend/
+run
 ```
 mvn spring-boot:run
 ```
 Now your REST API shall be up and running and accessible via curl commands or any REST client (Postman, ARC of chrome, etc.)
 * Run your [initial batch](https://github.com/mizaMeyssa/initialBatch) as follows
-- Go under robots_shop_backend/db/db_init folder
-- To download node dependencies run
+Go under robots_shop_backend/db/db_init folder
+To download node dependencies run
 ```
 npm install
 ```
-- run the initial batch as follows
+run the initial batch as follows
 ```
 sh initial-batch.sh
 ```
