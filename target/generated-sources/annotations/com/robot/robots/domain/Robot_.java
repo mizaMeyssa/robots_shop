@@ -10,7 +10,6 @@ import javax.persistence.metamodel.StaticMetamodel;
 @StaticMetamodel(Robot.class)
 public abstract class Robot_ {
 
-	public static volatile SingularAttribute<Robot, Boolean> sold;
 	public static volatile SingularAttribute<Robot, BigDecimal> price;
 	public static volatile SingularAttribute<Robot, Long> qty;
 	public static volatile SetAttribute<Robot, Purchase> puchases;

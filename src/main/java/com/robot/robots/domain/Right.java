@@ -8,14 +8,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "`right`")
+@Table(name = "access_right")
 public class Right implements Identifiable{
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "right_gen")
+	@SequenceGenerator(name = "right_gen", sequenceName = "right_id_seq")
 	private Long id;
 	
 	@Column(name = "code")

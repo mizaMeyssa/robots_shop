@@ -11,14 +11,16 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "`user`")
+@Table(name = "app_user")
 public class User implements Identifiable{
 
 		@Id
-		@GeneratedValue(strategy = GenerationType.AUTO)
+		@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "user_gen")
+		@SequenceGenerator(name = "user_gen", sequenceName = "user_id_seq")
 		private Long id;
 		
 		@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)

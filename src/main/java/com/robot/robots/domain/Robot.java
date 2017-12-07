@@ -9,14 +9,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import org.hibernate.annotations.Formula;
 
 @Entity
 @Table(name = "robot")
 public class Robot implements Identifiable {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "robot_gen")
+	@SequenceGenerator(name = "robot_gen", sequenceName = "robot_id_seq")
     private Long id;
 	
 	@OneToMany(mappedBy = "robot")
@@ -31,7 +36,8 @@ public class Robot implements Identifiable {
 	@Column(name = "price", nullable= false)
     private BigDecimal price;
 	
-	@Column(name = "sold", nullable= false)
+	@Transient
+	@Formula(value = "case when qty=0 then true else false")
     private boolean sold = false;
 	
 	@Column(name = "qty", nullable= false)
@@ -75,10 +81,6 @@ public class Robot implements Identifiable {
 		return sold;
 	}
 
-	public void setSold(boolean sold) {
-		this.sold = sold;
-	}
-
 	public Long getQty() {
 		return qty;
 	}
@@ -91,7 +93,6 @@ public class Robot implements Identifiable {
     	this.setDescription(robot.getDescription());
     	this.setLabel(robot.getLabel());
     	this.setPrice(robot.getPrice());
-    	this.setSold(robot.isSold());
     	this.setQty(robot.getQty());
     }
 
