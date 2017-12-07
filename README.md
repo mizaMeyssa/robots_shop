@@ -17,7 +17,7 @@ This is a Spring based REST API for Robots Shop
 
 * Install all the prerequisites 
 * Download the package and go under robots_shop_backend folder
-* Create The database as follows 
+* Create The database as follows	
 Go under robots_shop_backend/db folder and run 
 ```
 sh install_db.sh
