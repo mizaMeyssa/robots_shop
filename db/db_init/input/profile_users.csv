@@ -1,0 +1,4 @@
+ProfileCode,ProfileLabel,UserLogin,UserPassword
+ADMIN,System administrator,maissa,pass
+BUYER,Supplay chain buyer,amine,pass
+CUSTOMER,System customer,tijou,pass

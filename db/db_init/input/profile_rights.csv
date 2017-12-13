@@ -1,0 +1,10 @@
+ProfileCode,ProfileLabel,RightCode,RightCode
+ADMIN,System administrator,READ_LIST_ROBOTS,Browse Robots' list details
+ADMIN,System administrator,WRITE_LIST_ROBOTS,Edit Robots' list
+ADMIN,System administrator,READ_LIST_CARTS,Browse Carts' list details
+ADMIN,System administrator,WRITE_LIST_CARTS,Edit Cart's' list
+BUYER,Supplay chain buyer,READ_LIST_ROBOTS,Browse Robots' list details
+BUYER,Supplay chain buyer,WRITE_LIST_ROBOTS,Edit Robots' list
+CUSTOMER,System customer,READ_LIST_ROBOTS,Browse Robots' list details
+CUSTOMER,System customer,BUY_ROBOT,Buy Robot
+CUSTOMER,System customer,EDIT_CART,Edit Cart content
